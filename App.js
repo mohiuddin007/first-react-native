@@ -6,6 +6,7 @@ import NativeModal from "./components/NativeModal/NativeModal";
 import DisplayImage from "./components/DisplayImage/DisplayImage";
 import WelcomeScreen from "./components/Screens/WelcomeScreen";
 import ViewImageScreen from "./components/Screens/ViewImageScreen";
+import FlatListPr from "./components/FlatList/FlatListPr";
 
 const App = () => {
   // console.log("chrome debugging");
@@ -21,7 +22,8 @@ const App = () => {
         <DisplayImage />
       </ScrollView> */}
       {/* <WelcomeScreen/> */}
-      <ViewImageScreen/>
+      {/* <ViewImageScreen/> */}
+      <FlatListPr/>
     </>
   )
 };
