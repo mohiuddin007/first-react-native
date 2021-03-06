@@ -1,7 +1,12 @@
 import React from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}) => {
+
+    const pressHandler =() => {
+       navigation.navigate('Details')
+    // navigation.push('Details')    
+}
     return (
         <ImageBackground 
         style={styles.background}
@@ -14,6 +19,7 @@ const WelcomeScreen = () => {
             source={require('../../assets/google-voxytalksy.png')}
             ></Image>
             <Text style={{color: "#fc5c65"}}>Sell what you don't need. </Text>
+            <Button title="Go to details" onPress={pressHandler}/>
             </View>
 
          <View style={styles.loginButton}>

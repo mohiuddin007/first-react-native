@@ -1,9 +1,13 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Button, Image, ScrollView, StyleSheet, View } from 'react-native';
 
-const ViewImageScreen = () => {
+const ViewImageScreen = ({navigation}) => {
+     const pressHandler = () => {
+         navigation.goBack();
+     }
     return (
-        <View style={styles.container}>
+        <ScrollView>
+            <View style={styles.container}>
             <View style={styles.closeIcon}></View>
             <View style={styles.deleteIcon}></View>
             <Image
@@ -12,7 +16,9 @@ const ViewImageScreen = () => {
                 source={require('../../assets/dresden-5987976_1280.jpg')}>
 
             </Image>
+            <Button title="Back to home" onPress={pressHandler}/>
         </View>
+        </ScrollView>
     );
 };
 
@@ -34,8 +40,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     image: {
-        width: '100%',
-        height: '100%'
+        width: 300,
+        height: 500,
+        margin: 30,
     }
 })
 export default ViewImageScreen;
