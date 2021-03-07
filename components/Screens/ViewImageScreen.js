@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Image, ScrollView, StyleSheet, View } from 'react-native';
+import { Button, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const ViewImageScreen = ({navigation}) => {
      const pressHandler = () => {
@@ -16,7 +16,11 @@ const ViewImageScreen = ({navigation}) => {
                 source={require('../../assets/dresden-5987976_1280.jpg')}>
 
             </Image>
+            <Text style={{ color: "orange"}}>{navigation.getParam('name')}</Text>
+            <Text style={{ color: "orange"}}>{navigation.getParam('email')}</Text>
+            <Text style={{ color: "orange"}}>{navigation.getParam('phone')}</Text>
             <Button title="Back to home" onPress={pressHandler}/>
+            
         </View>
         </ScrollView>
     );

@@ -7,7 +7,7 @@ import DisplayImage from "./components/DisplayImage/DisplayImage";
 import WelcomeScreen from "./components/Screens/WelcomeScreen";
 import ViewImageScreen from "./components/Screens/ViewImageScreen";
 import FlatListPr from "./components/FlatList/FlatListPr";
-import Navigator from './Routes/HomeStack';
+import Navigator from './Routes/Drawer';
 
 const App = () => {
   // console.log("chrome debugging");
