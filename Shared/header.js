@@ -1,14 +1,15 @@
 import React from 'react';
-import {MaterialIcons} from '@expo/vector-icons';
+// import {MaterialIcons} from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {StyleSheet, Text, View} from 'react-native';
 
-export default function Header() {
+export default function Header({navigation}) {
     const openMenu = () => {
-        // navigation.openDrawer();
+        navigation.openDrawer();
     }
     return(
         <View style={styles.header}>
-            <MaterialIcons name="menu" size={28} onPress={openMenu} style={styles.icon}/>
+            <MaterialCommunityIcons name="menu" size={28} onPress={openMenu} style={styles.icon}/>
            <View>
                <Text style={styles.headerText}>Game Center</Text>
            </View>
